@@ -1,0 +1,94 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+const fallacies = await getCollection("fallacy");
+
+type Props = CollectionEntry<"fallacy">["data"];
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description="" />
+    <style>
+      .box {
+        border: 1px solid #e1e1e1;
+        border-radius: 12px;
+        /* height: 500px; */
+        display: flex;
+      }
+
+      aside {
+        padding: 10px;
+        border-right: 1px solid #e1e1e1;
+        overflow: auto;
+        flex: 0 0 auto;
+        /* display: none; */
+
+        @media (min-width: 1020px) {
+          display: block;
+        }
+      }
+
+      .block {
+        max-width: 360px;
+        border: 1px solid #e1e1e1;
+        border-radius: 6px;
+        padding: 10px;
+
+        &.active {
+          background-color: #fcfcfc;
+        }
+      }
+
+      li + li {
+        margin-top: 10px;
+      }
+
+      article {
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+
+    <main>
+      <section class="my-20">
+        <div class="container px-4 mx-auto">
+          <div class="box">
+            <aside>
+              <ul>
+                {
+                  fallacies.map((fallacy) => (
+                    <li>
+                      <a
+                        class={`block ${fallacy.data.title === title ? "active" : ""}`}
+                        href={`/fallacies/${fallacy.id}`}>
+                        <h3 class="h3 font-bold mb-2">{fallacy.data.title}</h3>
+                        <h3 class="h3 line-clamp-2">
+                          {fallacy.data.description}
+                        </h3>
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </aside>
+
+            <article>
+              <slot />
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

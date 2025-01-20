@@ -1,0 +1,21 @@
+---
+import LogicalFallacy from "@/layouts/LogicalFallacy.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const fallacies = await getCollection("fallacy");
+  return fallacies.map((fallacy) => ({
+    params: { slug: fallacy.id },
+    props: fallacy,
+  }));
+}
+type Props = CollectionEntry<"fallacy">;
+
+const fallacy = Astro.props;
+const { Content } = await render(fallacy);
+---
+
+<LogicalFallacy {...fallacy.data}>
+  <Content />
+</LogicalFallacy>

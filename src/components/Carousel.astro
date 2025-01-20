@@ -1,0 +1,64 @@
+---
+const arr = [{}, {}, {}, {}, {}, {}];
+---
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import AutoScroll from "embla-carousel-auto-scroll";
+
+  const emblaNode = document.querySelector(".embla") as HTMLElement;
+  const options = { loop: true };
+  const emblaApi = EmblaCarousel(emblaNode, options, [AutoScroll()]);
+</script>
+
+<div class="embla mb-5">
+  <div class="embla__container">
+    {
+      arr.map((n) => (
+        <div class="embla__slide">
+          <h3 class="h3 font-medium mb-1.5">Unfalsifiability Fallacy</h3>
+          <p class="line-clamp-4">
+            You made a claim that cannot be proven false, because it relies on
+            an explanation that is impossible to test or disprove
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<div class="embla">
+  <div class="embla__container">
+    {
+      arr.map((n) => (
+        <div class="embla__slide">
+          <h3 class="h3 font-medium mb-1.5">Unfalsifiability Fallacy</h3>
+          <p class="line-clamp-4">
+            You made a claim that cannot be proven false, because it relies on
+            an explanation that is impossible to test or disprove
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 auto;
+    min-width: 0;
+
+    width: 255px;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #fcfcfc;
+    border-radius: 12px;
+    border: 1px solid #e1e1e1;
+  }
+</style>
