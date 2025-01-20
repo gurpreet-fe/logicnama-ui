@@ -1,0 +1,35 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-weight: 500;
+}
+
+.title {
+  font-size: 128px;
+}
+
+h1,
+.h1 {
+}
+h2,
+.h2 {
+  font-size: 30px;
+}
+h3,
+.h3 {
+}
+h4,
+.h4 {
+}
+h5,
+.h5 {
+}
+
+article {
+  ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+  }
+}
