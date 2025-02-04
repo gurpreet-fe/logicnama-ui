@@ -1,5 +1,6 @@
 @import "./tailwind.css";
 @import "./typography.css";
+@import "./md.css";
 
 .stretchable-link {
   &::after {

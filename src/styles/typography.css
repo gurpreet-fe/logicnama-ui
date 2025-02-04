@@ -1,13 +1,35 @@
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
-  font-weight: 500;
+@import url('https://rsms.me/inter/inter.css');
+/* @font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter/inter.woff") format("woff"),
+    url("/fonts/inter/inter.woff2") format("woff2");
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  src: url("/fonts/inter/inter-italic.woff") format("woff"),
+    url("/fonts/inter/inter-italic.woff2") format("woff2");
+  font-weight: 100 900;
+} */
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
 }
 
 .title {
-  font-size: 128px;
+  font-size: 46px;
+
+  @media (min-width: 1280px) {
+    font-size: 128px;
+  }
 }
 
 h1,
@@ -25,6 +47,18 @@ h4,
 }
 h5,
 .h5 {
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  font-weight: 500;
+}
+
+p {
+  font-family: "Inter";
 }
 
 article {

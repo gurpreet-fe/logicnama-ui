@@ -1,0 +1,24 @@
+h2 {
+  /* text-gray-400 */
+  color: rgb(156 163 175);
+
+  font-size: 24px;
+  margin-top: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 1.2rem;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 1em 10px 0.1em;
+  /* quotes: "\201C""\201D""\2018""\2019"; */
+}
