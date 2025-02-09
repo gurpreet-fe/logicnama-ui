@@ -8,7 +8,7 @@ Scenario:
 
 ---
 
-Understanding the Bandwagon Fallacy:
+## Understanding the Bandwagon Fallacy:
 
 * Definition: The Bandwagon Fallacy occurs when someone argues that a belief or action is correct or superior simply because it is popular or widely accepted. This fallacy assumes that the popularity of an idea is evidence of its validity, which is not necessarily true.
 * Characteristics:
