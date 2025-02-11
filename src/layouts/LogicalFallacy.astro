@@ -19,40 +19,30 @@ const { title, description } = Astro.props;
       @import url("/node_modules/hamburgers/dist/hamburgers.min.css");
 
       aside {
+        border-right: 1px solid #e1e1e1;
+
         @media (max-width: 1019px) {
+          padding: 72px 20px 10px;
           position: absolute;
           top: 65px;
           bottom: 0;
           left: 0;
+          right: 0;
           background-color: white;
           transform: translateX(-100%);
           will-change: transform;
-          transition: transform 0.2s ease;
+          transition: transform 0.25s ease;
 
           &.mobile-active {
             transform: translateX(0);
-
-            &::after {
-              /* content: ""; */
-              display: block;
-              position: absolute;
-              background-color: pink;
-              top: 0;
-              bottom: 0;
-              left: 100%;
-              width: calc(100vw - 100%);
-            }
           }
         }
 
-        padding: 10px;
-        border-right: 1px solid #e1e1e1;
-        /* display: none; */
-
-        @media (min-width: 1020px) {
+        @media (min-width: 1024px) {
+          display: block;
           flex: 0 0 auto;
           overflow: auto;
-          display: block;
+          padding: 0 20px 10px 0;
         }
       }
 
@@ -61,14 +51,16 @@ const { title, description } = Astro.props;
       }
 
       article {
-        padding: 16px;
+        @media (min-width: 1024px) {
+          padding: 0 0 0 16px;
+        }
       }
 
       .mobile-bar {
         padding: 20px;
         line-height: 0;
 
-        @media (min-width:1020px) {
+        @media (min-width: 1024px) {
           display: none;
         }
       }
@@ -76,6 +68,8 @@ const { title, description } = Astro.props;
       .hamburger {
         padding: 0;
         line-height: 0;
+        position: relative;
+        z-index: 1;
 
         .hamburger-box {
           width: 24px;
@@ -130,7 +124,7 @@ const { title, description } = Astro.props;
                   fallacies.map((fallacy) => (
                     <li>
                       <a
-                        class={`${fallacy.data.title === title ? "" : "text-gray-400"}`}
+                        class={`${fallacy.data.title === title ? "" : "text-gray-400"} hover:text-gray-600`}
                         href={`/fallacies/${fallacy.id}`}>
                         {fallacy.data.title}
                       </a>
@@ -165,19 +159,21 @@ const { title, description } = Astro.props;
         hamburger?.addEventListener("click", (ev: any) => {
           ev.stopPropagation();
 
-          hamburger.classList.add("is-active");
-          aside?.classList.add("mobile-active");
+          hamburger.classList.toggle("is-active");
+          aside?.classList.toggle("mobile-active");
+          document.body.classList.toggle("overflow-hidden");
 
-          const handleClick = (ev: any) => {
+          const handleClickOutside = (ev: any) => {
             if (ev.target !== aside) {
-              hamburger?.classList.remove("is-active");
+              hamburger.classList.remove("is-active");
               aside?.classList.remove("mobile-active");
+              document.body.classList.toggle("overflow-hidden");
 
-              document.removeEventListener("click", handleClick);
+              document.removeEventListener("click", handleClickOutside);
             }
           };
 
-          document.addEventListener("click", handleClick);
+          document.addEventListener("click", handleClickOutside);
         });
       });
     </script>

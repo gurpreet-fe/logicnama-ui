@@ -1,31 +1,70 @@
 ---
+import InstaLogo from "public/svg/instagram.svg";
+import XLogo from "public/svg/X.svg";
+
 const today = new Date();
 ---
 
 <footer>
-  <div class="flex justify-between">
-    <div>
-      <p class="text-gray-400">Hosted By Bunga Azaadi</p>
-      <p>
-        This Website Was Produced By .... And Is Part of Bunga Azaadi’s
-        Vichaar Repository.
-      </p>
-      <p>
-        View More Vichaars on Sikhi, Statecraft & More at <a
-          class="font-bold"
-          href="">
-          www.azadism.co.uk
+  <div class="container mx-auto px-5">
+    <div class="flex flex-col lg:flex-row lg:justify-between">
+      <div class="max-w-[22rem]">
+        <p class="mb-4 text-gray-400">Hosted By Bunga Azaadi</p>
+        <p class="mb-4">
+          This Website Was Produced By <a
+            href="https://www.artalabs.com"
+            target="_blank">Arta Labs</a
+          > And Is Part of Bunga Azaadi’s Vichaar Repository.
+        </p>
+        <p>
+          View More Vichaars on Sikhi, Statecraft & More at <a
+            href="https://www.bungaazaadi.com">
+            www.bungaazaadi.com
+          </a>
+        </p>
+      </div>
+      <div class="flex gap-2 h-min self-end">
+        Follow us
+        <a
+          class="social-icon"
+          href="https://www.instagram.com/bunga_azaadi/"
+          target="_blank">
+          <InstaLogo height={24} width={24} fill={"currentColor"} />
         </a>
-      </p>
+        <a
+          class="social-icon"
+          href="https://www.instagram.com/bunga_azaadi/"
+          target="_blank">
+          <XLogo height={24} width={24} fill={"currentColor"} />
+        </a>
+      </div>
     </div>
-
-    <div>Follow us</div>
   </div>
 </footer>
 
 <style>
   footer {
-    margin: 80px 0;
-	padding: 0 16px;
+    margin: 40px 0;
+    padding: 0 16px;
+
+    @media (min-width: 1024px) {
+      margin: 80px 0;
+    }
+  }
+
+  a:not(.social-icon) {
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .social-icon {
+    /* --text-gray-400 */
+    color: rgb(156 163 175);
+    &:hover {
+      color: black;
+      cursor: pointer;
+    }
   }
 </style>

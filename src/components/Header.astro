@@ -4,19 +4,24 @@ import { SITE_TITLE } from "../consts";
 ---
 
 <header>
-  <nav>
-    <div><a href="/">{SITE_TITLE}</a></div>
-
-    <div class="internal-links">
-      <HeaderLink href="/about">About</HeaderLink>
-    </div>
-  </nav>
+  <div class="container mx-auto px-5">
+    <nav>
+      <div><a href="/">{SITE_TITLE}</a></div>
+      <div class="internal-links">
+        <HeaderLink href="/about">About</HeaderLink>
+      </div>
+    </nav>
+  </div>
 </header>
 <style>
   header {
     height: 65px;
     border-bottom: 1px solid #e1e1e1;
-	padding: 20px;
+    background-color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
   }
   nav {
     display: flex;
