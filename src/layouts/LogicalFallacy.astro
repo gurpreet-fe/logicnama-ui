@@ -28,6 +28,7 @@ const { title, description } = Astro.props;
           bottom: 0;
           left: 0;
           right: 0;
+          z-index: 1;
           background-color: white;
           transform: translateX(-100%);
           will-change: transform;
@@ -54,9 +55,23 @@ const { title, description } = Astro.props;
         @media (min-width: 1024px) {
           padding: 0 0 0 16px;
         }
+
+        &::after {
+          content: '';
+          position: sticky;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          display: block;
+          width: 100%;
+          height: 80px;
+          background: linear-gradient(to top, white, transparent);
+        }
       }
 
       .mobile-bar {
+        position: relative;
+        z-index: 2;
         padding: 20px;
         line-height: 0;
 
@@ -115,7 +130,7 @@ const { title, description } = Astro.props;
 
       <h1 class="title text-center my-20">{title}</h1>
 
-      <section class="my-20">
+      <section class="mt-20">
         <div class="container px-4 mx-auto">
           <div class="flex">
             <aside>
@@ -134,7 +149,7 @@ const { title, description } = Astro.props;
               </ul>
             </aside>
 
-            <article class="md">
+            <article class="md relative">
               <slot />
             </article>
           </div>

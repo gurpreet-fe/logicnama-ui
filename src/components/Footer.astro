@@ -7,7 +7,7 @@ const today = new Date();
 
 <footer>
   <div class="container mx-auto px-5">
-    <div class="flex flex-col lg:flex-row lg:justify-between">
+    <div class="flex flex-col gap-4 lg:flex-row lg:justify-between">
       <div class="max-w-[22rem]">
         <p class="mb-4 text-gray-400">Hosted By Bunga Azaadi</p>
         <p class="mb-4">
@@ -23,7 +23,7 @@ const today = new Date();
           </a>
         </p>
       </div>
-      <div class="flex gap-2 h-min self-end">
+      <div class="flex gap-2 h-min lg:self-end">
         Follow us
         <a
           class="social-icon"
@@ -43,15 +43,6 @@ const today = new Date();
 </footer>
 
 <style>
-  footer {
-    margin: 40px 0;
-    padding: 0 16px;
-
-    @media (min-width: 1024px) {
-      margin: 80px 0;
-    }
-  }
-
   a:not(.social-icon) {
     font-weight: 600;
     &:hover {

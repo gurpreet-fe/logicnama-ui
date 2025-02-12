@@ -1,22 +1,42 @@
-@import url('https://rsms.me/inter/inter.css');
-/* @font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter/inter.woff") format("woff"),
-    url("/fonts/inter/inter.woff2") format("woff2");
-  font-weight: 100 900;
+@import url("https://rsms.me/inter/inter.css");
+
+@font-face {
+  font-family: "Switzer";
+  src:
+    url("/fonts/switzer/switzer-regular.woff") format("woff"),
+    url("/fonts/switzer/switzer-regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Switzer";
+  src:
+    url("/fonts/switzer/switzer-bold.woff") format("woff"),
+    url("/fonts/switzer/switzer-bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src:
+    url("/fonts/switzer/switzer-italic.woff") format("woff"),
+    url("/fonts/switzer/switzer-italic.woff2") format("woff2");
   font-style: italic;
-  src: url("/fonts/inter/inter-italic.woff") format("woff"),
-    url("/fonts/inter/inter-italic.woff2") format("woff2");
-  font-weight: 100 900;
-} */
+}
+
+@font-face {
+  font-family: "Switzer";
+  src:
+    url("/fonts/switzer/switzer-regular.woff") format("woff"),
+    url("/fonts/switzer/switzer-regular.woff2") format("woff2");
+  font-style: italic;
+  font-weight: bold;
+}
 
 :root {
   font-family: "Inter", sans-serif;
-  font-feature-settings: "liga" 1, "calt" 1;
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1;
 }
 @supports (font-variation-settings: normal) {
   :root {
@@ -26,6 +46,7 @@
 
 .title {
   font-size: 46px;
+  font-family: 'Switzer';
 
   @media (min-width: 1280px) {
     font-size: 128px;
@@ -35,16 +56,20 @@
 h1,
 .h1 {
 }
+
 h2,
 .h2 {
   font-size: 30px;
 }
+
 h3,
 .h3 {
 }
+
 h4,
 .h4 {
 }
+
 h5,
 .h5 {
 }
@@ -55,15 +80,4 @@ h5,
 .h4,
 .h5 {
   font-weight: 500;
-}
-
-p {
-  font-family: "Inter";
-}
-
-article {
-  ul {
-    list-style: disc;
-    padding-left: 1.2rem;
-  }
 }
