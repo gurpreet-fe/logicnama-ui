@@ -1,45 +1,45 @@
 ---
-const arr = [{}, {}, {}, {}, {}, {}];
+interface Props {
+  direction?: "ltr" | "rtl";
+  alignment?: "start" | "center" | "end";
+}
+const { direction, alignment } = Astro.props;
 ---
 
 <script>
   import EmblaCarousel from "embla-carousel";
   import AutoScroll from "embla-carousel-auto-scroll";
+  import type { AlignmentOptionType } from "node_modules/embla-carousel/components/Alignment";
+  import type { AxisDirectionOptionType } from "node_modules/embla-carousel/components/Axis";
 
-  const emblaNode = document.querySelector(".embla") as HTMLElement;
-  const options = { loop: true };
-  const emblaApi = EmblaCarousel(emblaNode, options, [AutoScroll()]);
+  const emblaList = Array.from(
+    document.querySelectorAll(".embla"),
+  ) as HTMLElement[];
+
+  const defaultOptions = {
+    loop: true,
+  };
+
+  emblaList.forEach((embla) => {
+    const direction = (embla.dataset.carouselDirection ||
+      "ltr") as AxisDirectionOptionType;
+    const alignment = (embla.dataset.carouselAlignment ||
+      "center") as AlignmentOptionType;
+
+    const options = { ...defaultOptions, direction, align: alignment };
+
+    const emblaApi = EmblaCarousel(embla, options, [AutoScroll()]);
+  });
 </script>
 
-<div class="embla mb-5">
-  <div class="embla__container">
-    {
-      arr.map((n) => (
-        <div class="embla__slide">
-          <h3 class="h3 font-medium mb-1.5">Unfalsifiability Fallacy</h3>
-          <p class="line-clamp-4">
-            You made a claim that cannot be proven false, because it relies on
-            an explanation that is impossible to test or disprove
-          </p>
-        </div>
-      ))
-    }
-  </div>
-</div>
-
-<div class="embla">
-  <div class="embla__container">
-    {
-      arr.map((n) => (
-        <div class="embla__slide">
-          <h3 class="h3 font-medium mb-1.5">Unfalsifiability Fallacy</h3>
-          <p class="line-clamp-4">
-            You made a claim that cannot be proven false, because it relies on
-            an explanation that is impossible to test or disprove
-          </p>
-        </div>
-      ))
-    }
+<div
+  class="embla mb-5"
+  data-carousel-direction={direction}
+  data-carousel-alignment={alignment}
+  dir={direction === "rtl" ? "rtl" : undefined}
+>
+  <div class:list={["embla__container", { "text-end": direction === "rtl" }]}>
+    <slot />
   </div>
 </div>
 
@@ -49,16 +49,5 @@ const arr = [{}, {}, {}, {}, {}, {}];
   }
   .embla__container {
     display: flex;
-  }
-  .embla__slide {
-    flex: 0 0 auto;
-    min-width: 0;
-
-    width: 255px;
-    margin-left: 20px;
-    padding: 10px;
-    background-color: #fcfcfc;
-    border-radius: 12px;
-    border: 1px solid #e1e1e1;
   }
 </style>

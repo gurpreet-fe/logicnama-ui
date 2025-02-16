@@ -8,48 +8,97 @@ import Header from "@/components/Header.astro";
 import "@/styles/global.css";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
-const fallacyCollection = await getCollection("fallacy");
-const fallacies = fallacyCollection!;
+const fallacies = await getCollection("fallacy");
+
+const midpoint = Math.floor(fallacies.length / 2);
+const firstHalf = fallacies.slice(0, midpoint);
+const secondHalf = fallacies.slice(midpoint);
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      .embla__slide {
+        flex: 0 0 auto;
+        min-width: 0;
+
+        width: 255px;
+        margin-left: 20px;
+        padding: 10px;
+        background-color: #fcfcfc;
+        border-radius: 12px;
+        border: 1px solid #e1e1e1;
+      }
+    </style>
   </head>
   <body>
     <Header />
     <main>
-      <div class="text-center">
-        <h1 class="title">Logical Fallacies For Sikhs</h1>
-        <h2 class="h2 text-gray-500">
-          A List Of Logical Fallacies and Sikh relevant examples
-        </h2>
-      </div>
-
-      <!-- carousel -->
-      <section class="my-20">
-        <Carousel />
+      <section
+        class="flex flex-col justify-center h-[50vh] sm:h-[33vh] lg:h-[50vh] md:text-center"
+      >
+        <div class="container px-5 mx-auto">
+          <h1 class="title mb-5">Logical Fallacies <br /> For Sikhs</h1>
+          <h2 class="subtitle text-gray-500">
+            A List Of Logical Fallacies and Sikh relevant examples
+          </h2>
+        </div>
       </section>
 
-      <section class="my-20">
-        <div class="container px-4 mx-auto">
-          <h2 class="h2 mb-5">A-Z</h2>
-          <div
-            class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 justify-items-center">
-            {
-              fallacies.map((fallacy) => (
-                <Card
-                  title={fallacy.data.title}
-                  text={fallacy.data.description}
-                  link={`/fallacies/${fallacy.id}`}
-                />
-              ))
-            }
-          </div>
+      <!-- carousels -->
+      <section class="my-20 relative">
+        <Carousel>
+          {
+            firstHalf.map((fallacy) => (
+              <div class="embla__slide">
+                <h3 class="h3 font-medium mb-1.5">{fallacy.data.title}</h3>
+                <p class="line-clamp-4">{fallacy.data.description}</p>
+              </div>
+            ))
+          }
+        </Carousel>
+        <Carousel alignment="start" direction="rtl">
+          {
+            secondHalf.map((fallacy) => (
+              <div class="embla__slide">
+                <h3 class="h3 font-medium mb-1.5">{fallacy.data.title}</h3>
+                <p class="line-clamp-4">{fallacy.data.description}</p>
+              </div>
+            ))
+          }
+        </Carousel>
+
+        <div
+          class="pointer-events-none absolute inset-y-0 left-0 h-full w-3/12 bg-gradient-to-r from-background"
+        >
+        </div>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 h-full w-3/12 bg-gradient-to-l from-background"
+        >
         </div>
       </section>
     </main>
+
+    <section class="my-20">
+      <div class="container max-w-screen-lg px-4 mx-auto">
+        <h2 class="h2 mb-5">A-Z</h2>
+        <div
+          class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 justify-items-center"
+        >
+          {
+            fallacies.map((fallacy) => (
+              <Card
+                title={fallacy.data.title}
+                text={fallacy.data.description}
+                link={`/fallacies/${fallacy.id}`}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
 
     <Footer />
   </body>
