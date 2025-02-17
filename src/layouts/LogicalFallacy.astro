@@ -16,28 +16,10 @@ const { title, description } = Astro.props;
   <head>
     <BaseHead title={title} description="" />
     <style>
-      @import url("/node_modules/hamburgers/dist/hamburgers.min.css");
-
       aside {
         border-right: 1px solid #e1e1e1;
-
-        @media (max-width: 1023px) {
-          padding: 72px 20px 10px;
-          position: absolute;
-          top: 65px;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          z-index: 1;
-          background-color: white;
-          transform: translateX(-100%);
-          will-change: transform;
-          transition: transform 0.25s ease;
-
-          &.mobile-active {
-            transform: translateX(0);
-          }
-        }
+        padding: 0 20px;
+        display: none;
 
         @media (min-width: 1024px) {
           display: block;
@@ -56,71 +38,16 @@ const { title, description } = Astro.props;
           padding: 0 0 0 20px;
         }
       }
-
-      .mobile-bar {
-        position: relative;
-        z-index: 2;
-        padding: 20px;
-        line-height: 0;
-
-        @media (min-width: 1024px) {
-          display: none;
-        }
-      }
-
-      .hamburger {
-        padding: 0;
-        line-height: 0;
-        position: relative;
-        z-index: 1;
-
-        .hamburger-box {
-          width: 24px;
-          height: 20px;
-        }
-
-        .hamburger-inner {
-          width: 24px;
-
-          &::before,
-          &::after {
-            width: 24px;
-          }
-        }
-
-        &:not(.is-active) {
-          .hamburger-inner {
-            &::before {
-              top: 8px;
-            }
-            &::after {
-              top: 16px;
-            }
-          }
-        }
-      }
     </style>
   </head>
   <body>
     <Header />
 
     <main>
-      <div class="mobile-bar">
-        <button
-          class="hamburger hamburger--slider"
-          id="hamburger"
-          type="button"
-        >
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-      </div>
-
       <h1 class="title text-center my-20">{title}</h1>
 
       <section class="my-20">
-        <div class="container max-w-screen-lg px-4 mx-auto">
+        <div class="container lg:max-w-screen-lg px-4 mx-auto">
           <div class="flex">
             <aside>
               <ul>
@@ -148,39 +75,5 @@ const { title, description } = Astro.props;
     </main>
 
     <Footer />
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.getElementById("hamburger");
-        if (!hamburger) {
-          console.error("Hamburger element does not exist");
-        }
-
-        const aside = document.querySelector("aside");
-        if (!aside) {
-          console.log("Aside element does not exist");
-        }
-
-        hamburger?.addEventListener("click", (ev: any) => {
-          ev.stopPropagation();
-
-          hamburger.classList.toggle("is-active");
-          aside?.classList.toggle("mobile-active");
-          document.body.classList.toggle("overflow-hidden");
-
-          const handleClickOutside = (ev: any) => {
-            if (ev.target !== aside) {
-              hamburger.classList.remove("is-active");
-              aside?.classList.remove("mobile-active");
-              document.body.classList.toggle("overflow-hidden");
-
-              document.removeEventListener("click", handleClickOutside);
-            }
-          };
-
-          document.addEventListener("click", handleClickOutside);
-        });
-      });
-    </script>
   </body>
 </html>

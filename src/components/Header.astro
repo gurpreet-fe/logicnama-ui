@@ -1,31 +1,167 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+import { getCollection } from "astro:content";
+
+const fallacies = await getCollection("fallacy");
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+const subpath = pathname.match(/[^\/]+/g);
+const currentFallacy = subpath?.[1];
 ---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById("hamburger");
+    if (!hamburger) {
+      console.error("Hamburger element does not exist");
+    }
+
+    const sidenav = document.querySelector(".mobile-sidenav");
+    if (!sidenav) {
+      console.log("Aside element does not exist");
+    }
+
+    hamburger?.addEventListener("click", (ev: any) => {
+      ev.stopPropagation();
+
+      hamburger.classList.toggle("is-active");
+      sidenav?.classList.toggle("active");
+      document.body.classList.toggle("overflow-hidden");
+
+      const handleClickOutside = (ev: any) => {
+        if (ev.target !== sidenav) {
+          hamburger.classList.remove("is-active");
+          sidenav?.classList.remove("active");
+          document.body.classList.toggle("overflow-hidden");
+
+          document.removeEventListener("click", handleClickOutside);
+        }
+      };
+
+      document.addEventListener("click", handleClickOutside);
+    });
+  });
+</script>
 
 <header>
   <div class="container mx-auto px-5">
     <nav>
       <div><a href="/">{SITE_TITLE}</a></div>
-      <div class="internal-links">
-        <HeaderLink href="/about">About</HeaderLink>
+      <div>
+        <button
+          class="hamburger hamburger--slider"
+          id="hamburger"
+          type="button"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
     </nav>
   </div>
+
+  <div class="mobile-sidenav">
+    <div class="container px-5 mx-auto">
+      <nav>
+        <ul class="flex flex-col gap-2.5 mt-10">
+          {
+            fallacies.map((fallacy) => (
+              <li>
+                <a
+                  class:list={[
+                    fallacy.id === currentFallacy ? "" : "text-gray-400",
+                    "hover:text-gray-600",
+                  ]}
+                  href={`/fallacies/${fallacy.id}`}
+                >
+                  {fallacy.data.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
+
 <style>
+  @import url("/node_modules/hamburgers/dist/hamburgers.min.css");
+
   header {
+    position: relative;
     height: 65px;
     border-bottom: 1px solid #e1e1e1;
-    background-color: white;
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 2;
+    backdrop-filter: blur(20px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: white;
+      opacity: 0.5;
+      z-index: -1;
+    }
   }
+
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .hamburger {
+    padding: 0;
+    line-height: 0;
+    position: relative;
+    z-index: 1;
+
+    .hamburger-box {
+      width: 24px;
+      height: 20px;
+    }
+
+    .hamburger-inner {
+      width: 24px;
+
+      &::before,
+      &::after {
+        width: 24px;
+      }
+    }
+
+    &:not(.is-active) {
+      .hamburger-inner {
+        &::before {
+          top: 8px;
+        }
+        &::after {
+          top: 16px;
+        }
+      }
+    }
+  }
+
+  .mobile-sidenav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 65px;
+    height: calc(100vh - 65px);
+    z-index: 1;
+
+    background-color: white;
+    transform: translateX(100%);
+    will-change: transform;
+    transition: transform 0.25s ease;
+
+    &.active {
+      transform: translateX(0);
+    }
   }
 </style>
