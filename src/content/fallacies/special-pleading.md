@@ -1,6 +1,6 @@
 ---
 title: 'Special Pleading'
-description: ''
+description: 'You moved the goalposts or made up an exception when your claim was shown to be false.'
 ---
 Scenario:
 

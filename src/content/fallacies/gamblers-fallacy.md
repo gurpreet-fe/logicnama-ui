@@ -1,4 +1,0 @@
----
-title: 'Gamblers Fallacy'
-description: ''
----

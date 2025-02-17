@@ -1,6 +1,6 @@
 ---
 title: 'Unfalsifiability'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+description: "You made a claim that cannot be proven false, because it relies on an explanation that is impossible to test or disprove (appeal to unfalsifiability)."
 ---
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

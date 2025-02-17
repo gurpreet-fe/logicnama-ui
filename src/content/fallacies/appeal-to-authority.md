@@ -1,6 +1,6 @@
 ---
 title: 'Appeal to Authority'
-description: ''
+description: 'You said that because an authority thinks something, it must therefore be true.'
 ---
 
 ## Scenario

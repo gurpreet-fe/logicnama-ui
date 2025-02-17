@@ -1,6 +1,6 @@
 ---
 title: 'Strawman'
-description: 'Lorem ipsum'
+description: "You misrepresented someone's argument to make it easier to attack."
 ---
 
 Scenario:

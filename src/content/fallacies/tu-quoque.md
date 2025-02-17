@@ -1,6 +1,6 @@
 ---
 title: 'Tu Quoque'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+description: "You avoided having to engage with criticism by turning it back on the accuser - you answered criticism with criticism (appeal to hypocrisy)."
 ---
 Scenario:
 

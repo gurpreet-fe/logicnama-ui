@@ -1,6 +1,6 @@
 ---
 title: 'Slippery Slope'
-description: ''
+description: "You said that if we allow A to happen, then Z will eventually happen too, therefore A should not happen."
 ---
 Scenario:
 
