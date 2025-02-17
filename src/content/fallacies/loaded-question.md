@@ -3,12 +3,12 @@ title: 'Loaded Question'
 description: "You asked a question that had a presumption built into it so that it couldn't be answered without appearing guilty."
 ---
 
-## Example:
+## Example
 
 A Sikh asks another Sikh why they believe they are above their Sant Baba for questioning or doubting something they said.
 
 
-## Understanding the Loaded Question Fallacy:
+## Understanding the Loaded Question Fallacy
 
 A Loaded Question Fallacy occurs when someone asks a question that contains a controversial or unjustified assumption, making it difficult to answer without appearing guilty or accepting that assumption. It's a way to trap the respondent into admitting something they might disagree with.
 
@@ -18,10 +18,7 @@ A Loaded Question Fallacy occurs when someone asks a question that contains a co
    * **Manipulative**: It puts the respondent in a defensive position, diverting from rational debate.
 
 
-
-
-
-## Applying It To The Example:
+## Applying It To The Example
 
 1. **The Question Asked**:
    * "Why do you believe you are above your Sant Baba for questioning or doubting something they said?"
@@ -37,7 +34,7 @@ A Loaded Question Fallacy occurs when someone asks a question that contains a co
 
 
 
-## Why It's Fallacious Reasoning:
+## Why It's Fallacious Reasoning
 
  * **Suppresses Critical Thinking**:
    * **Sikhi Encourages Inquiry**: Sikh teachings promote understanding through reflection and questioning. The Gurus themselves engaged in many dialogues to elucidate spiritual concepts (Sikhan Di Bhagat Mala written by Shaheed Bhai Mani Singh is a good example).
@@ -51,6 +48,6 @@ A Loaded Question Fallacy occurs when someone asks a question that contains a co
 
 
 
-## Conclusion:
+## Conclusion
 
 The question is a Loaded Question Fallacy because it contains several unjustified assumptions that force the respondent into a corner. It assumes that questioning the Sant Baba is equivalent to claiming superiority, which isn't necessarily true. This fallacy hinders open dialogue and critical examination, which are important aspects of personal growth and understanding in Sikhi.
