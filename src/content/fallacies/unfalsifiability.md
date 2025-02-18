@@ -3,9 +3,7 @@ title: 'Unfalsifiability'
 description: "You made a claim that cannot be proven false, because it relies on an explanation that is impossible to test or disprove (appeal to unfalsifiability)."
 ---
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-## Scenario
+## Example
 
 People claim that certain Sant Babai have powers to read minds, know things supernaturally etc. However, when you ask them, why these Sant Babai don't use their powers to warn people about predators or fake Sant Babai, these people say that they can not use their powers to interfere in the divine will. Yet they claim that the Sant baba knows everything.
 
