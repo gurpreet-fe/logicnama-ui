@@ -1,11 +1,9 @@
 ---
 title: 'Unfalsifiability'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+description: "You made a claim that cannot be proven false, because it relies on an explanation that is impossible to test or disprove (appeal to unfalsifiability)."
 ---
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-## Scenario
+## Example
 
 People claim that certain Sant Babai have powers to read minds, know things supernaturally etc. However, when you ask them, why these Sant Babai don't use their powers to warn people about predators or fake Sant Babai, these people say that they can not use their powers to interfere in the divine will. Yet they claim that the Sant baba knows everything.
 
@@ -17,7 +15,7 @@ People claim that certain Sant Babai have powers to read minds, know things supe
     * **Often Linked to the Supernatural:** Claims about supernatural forces, divine will, or metaphysical concepts are common in unfalsifiable reasoning because they exist outside the realm of empirical investigation.
     * **Ad Hoc Explanations:** New, additional explanations are created as needed to protect the claim from being disproven (often without logical consistency).
 
-## Applying It to Your Scenario:
+## Applying It To The Example
 
 1. **Initial Claim:**
     * **Supernatural Powers:** People claim that certain Sant Babai have supernatural powers, such as reading minds or knowing things supernaturally. This is already a claim difficult to verify but can potentially be tested through observation.

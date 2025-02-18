@@ -1,6 +1,6 @@
 ---
 title: 'Appeal to Authority'
-description: ''
+description: 'You said that because an authority thinks something, it must therefore be true.'
 ---
 
 ## Scenario
@@ -15,7 +15,7 @@ A Sikh says that Sikhi is against meat because someone who they personally belie
     * **Lack of Supporting Evidence**: No empirical data or logical arguments are provided.
     * **Irrelevant or Unqualified Authority**: The authority may not be a recognized expert on the specific topic.
 
-## Applying It to the Scenario
+## Applying It To The Example
 
 1. **The Claim**:
     * **Assertion**: "Sikhi is against meat."

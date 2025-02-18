@@ -1,6 +1,6 @@
 ---
 title: 'Ambiguity'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+description: 'You used a double meaning or ambiguity of language to mislead or misrepresent the truth.'
 ---
 
 ## Scenario
