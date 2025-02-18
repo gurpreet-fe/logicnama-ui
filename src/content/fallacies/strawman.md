@@ -17,7 +17,7 @@ The Sangat protest against the Kar Seva Babai for demolishing historical Sikh Gu
   * **Superficial Response**: The misrepresented version of the argument is easier to refute, giving the appearance of a successful counter-argument.
 
 
-## Applying It to the Scenario
+## Applying It To The Example
 
 1. **Initial Criticism**:
     * **Opposition to Demolition**: The Sangat are protesting the demolition of historical Sikh Gurdwarai, concerned that replacing them with modern but impractical designs would damage their cultural and historical significance. The core issue here is the preservation of heritage while balancing functionality.

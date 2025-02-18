@@ -17,7 +17,7 @@ A member of the Sangat approaches a Gurdwara committee, criticizing them for mis
   * **Irrelevant Response**: The counter-criticism is irrelevant to the original concern, serving as a distraction rather than a valid argument.
 
 
-## Applying It to the Scenario
+## Applying It To The Example
 
 1. **Initial Criticism**:
     * **Misuse of Donations**: A member of the Sangat criticizes the Gurdwara committee for using donated funds for personal renovations rather than for community projects or charitable purposes as originally intended.
