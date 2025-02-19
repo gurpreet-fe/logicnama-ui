@@ -1,6 +1,6 @@
 ---
 title: 'Middle Ground'
-description: "You claimed that a compromise, or middle point, between two extremes must be the truth."
+description: "You claimed that a compromise, or middle point, between two extremes must be the truth"
 ---
 
 ## Example

@@ -1,6 +1,6 @@
 ---
 title: 'Tu Quoque'
-description: "You avoided having to engage with criticism by turning it back on the accuser - you answered criticism with criticism (appeal to hypocrisy)."
+description: "You avoided having to engage with criticism by turning it back on the accuser - you answered criticism with criticism (appeal to hypocrisy)"
 ---
 
 ## Example

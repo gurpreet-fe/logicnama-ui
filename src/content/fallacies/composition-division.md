@@ -1,6 +1,6 @@
 ---
 title: 'Composition/Divison'
-description: 'You assumed that one part of something has to be applied to all, or other, parts of it; or that the whole must apply to its parts.'
+description: 'You assumed that one part of something has to be applied to all, or other, parts of it; or that the whole must apply to its parts'
 ---
 
 ## Example

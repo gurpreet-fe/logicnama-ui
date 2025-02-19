@@ -1,6 +1,6 @@
 ---
 title: 'Strawman'
-description: "You misrepresented someone's argument to make it easier to attack."
+description: "You misrepresented someone's argument to make it easier to attack"
 ---
 
 ## Example

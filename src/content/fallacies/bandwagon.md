@@ -1,6 +1,6 @@
 ---
 title: 'Bandwagon'
-description: 'You appealed to popularity or the fact that many people do something as an attempted form of validation.'
+description: 'You appealed to popularity or the fact that many people do something as an attempted form of validation'
 ---
 
 ## Example

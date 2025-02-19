@@ -1,6 +1,6 @@
 ---
 title: 'Loaded Question'
-description: "You asked a question that had a presumption built into it so that it couldn't be answered without appearing guilty."
+description: "You asked a question that had a presumption built into it so that it couldn't be answered without appearing guilty"
 ---
 
 ## Example

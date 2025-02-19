@@ -1,6 +1,6 @@
 ---
 title: 'Unfalsifiability'
-description: "You made a claim that cannot be proven false, because it relies on an explanation that is impossible to test or disprove (appeal to unfalsifiability)."
+description: "You made a claim that cannot be proven false, because it relies on an explanation that is impossible to test or disprove (appeal to unfalsifiability)"
 ---
 
 ## Example

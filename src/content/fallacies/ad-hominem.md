@@ -1,6 +1,6 @@
 ---
 title: 'Ad Hominem'
-description: "You attacked your opponent's character or personal traits in an attempt to undermine their argument."
+description: "You attacked your opponent's character or personal traits in an attempt to undermine their argument"
 ---
 
 ## Scenario

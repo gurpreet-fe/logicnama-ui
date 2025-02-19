@@ -1,6 +1,6 @@
 ---
 title: 'Ambiguity'
-description: 'You used a double meaning or ambiguity of language to mislead or misrepresent the truth.'
+description: 'You used a double meaning or ambiguity of language to mislead or misrepresent the truth'
 ---
 
 ## Scenario
