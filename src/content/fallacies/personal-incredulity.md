@@ -1,6 +1,6 @@
 ---
 title: 'Personal Incredulity'
-description: "Because you found something difficult to understand, or are unaware of how it works, you made out like it's probably not true."
+description: "Because you found something difficult to understand, or are unaware of how it works, you made out like it's probably not true"
 ---
 
 ## Example
