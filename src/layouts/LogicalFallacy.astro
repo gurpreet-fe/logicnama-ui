@@ -55,7 +55,7 @@ const { title, description } = Astro.props;
                   fallacies.map((fallacy) => (
                     <li>
                       <a
-                        class={`${fallacy.data.title === title ? "" : "text-gray-400"} hover:text-gray-600`}
+                        class={`${fallacy.data.title === title ? "" : "text-lf-grey"} hover:text-lf-black`}
                         href={`/fallacies/${fallacy.id}`}
                       >
                         {fallacy.data.title}
@@ -63,6 +63,7 @@ const { title, description } = Astro.props;
                     </li>
                   ))
                 }
+                <li class="pt-10">More coming soon...</li>
               </ul>
             </aside>
 

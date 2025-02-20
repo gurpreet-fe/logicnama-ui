@@ -6,36 +6,45 @@ const today = new Date();
 ---
 
 <footer class="my-10">
-  <div class="container mx-auto px-5">
+  <div class="container mx-auto max-w-screen-lg px-5">
     <div class="flex flex-col gap-4 lg:flex-row lg:justify-between">
-      <div class="max-w-[22rem]">
-        <p class="mb-4 text-gray-400">Hosted By Bunga Azaadi</p>
-        <p class="mb-4">
+      <div class="max-w-sm">
+        <p class="mb-4 font-bold">Logicnama.com</p>
+        <p class="mb-4 capitalize">
           This Website Was Produced By <a
-            href="https://www.artalabs.com"
-            target="_blank">Arta Labs</a
-          > And Is Part of Bunga Azaadi’s Vichaar Repository.
+            href="https://github.com/gurpreet-fe"
+            class="underline hover:underline-offset-4 lowercase"
+            target="_blank">gurpreet-fe</a
+          > & based off the "Vichaar Vidiya" section of Bunga Azaadi’s Vichaar Repository.
         </p>
         <p>
           View More Vichaars on Sikhi, Statecraft & More at <a
-            href="https://www.bungaazaadi.com">
-            www.bungaazaadi.com
+            class="font-bold"
+            href="https://www.bungaazaadi.com"
+          >
+            www.BungaAzaadi.com
           </a>
         </p>
       </div>
-      <div class="flex gap-2 h-min lg:self-end">
-        Follow us
+      <div class="flex flex-col gap-1 h-min">
+        <div class="font-bold mb-2">Follow us</div>
         <a
-          class="social-icon"
           href="https://www.instagram.com/bunga_azaadi/"
-          target="_blank">
-          <InstaLogo height={24} width={24} fill={"currentColor"} />
+          target="_blank"
+        >
+          Instagram
         </a>
         <a
-          class="social-icon"
-          href="https://www.instagram.com/bunga_azaadi/"
-          target="_blank">
-          <XLogo height={24} width={24} fill={"currentColor"} />
+          href="https://azadism.substack.com/"
+          target="_blank"
+        >
+          Substack
+        </a>
+        <a
+          href="https://linktr.ee/azadism"
+          target="_blank"
+        >
+          Linktree
         </a>
       </div>
     </div>
@@ -43,10 +52,11 @@ const today = new Date();
 </footer>
 
 <style>
-  a:not(.social-icon) {
-    font-weight: 600;
+  a {
+    color: rgb(var(--lf-black));
+
     &:hover {
-      text-decoration: underline;
+      color: rgb(var(--lf-grey));
     }
   }
 
