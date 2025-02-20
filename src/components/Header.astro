@@ -43,8 +43,8 @@ const currentFallacy = subpath?.[1];
 </script>
 
 <header>
-  <div class="container mx-auto px-5">
-    <nav>
+  <div class="container mx-auto max-w-screen-lg px-5">
+    <nav class="header-nav">
       <div><a href="/">{SITE_TITLE}</a></div>
       <div>
         <button
@@ -62,15 +62,15 @@ const currentFallacy = subpath?.[1];
 
   <div class="mobile-sidenav">
     <div class="container px-5 mx-auto">
-      <nav>
+      <nav class="text-end">
         <ul class="flex flex-col gap-2.5 mt-10">
           {
             fallacies.map((fallacy) => (
               <li>
                 <a
                   class:list={[
-                    fallacy.id === currentFallacy ? "" : "text-gray-400",
-                    "hover:text-gray-600",
+                    fallacy.id === currentFallacy ? "" : "text-lg-grey",
+                    "hover:text-lf-black",
                   ]}
                   href={`/fallacies/${fallacy.id}`}
                 >
@@ -108,39 +108,44 @@ const currentFallacy = subpath?.[1];
     }
   }
 
-  nav {
+  .header-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   .hamburger {
-    padding: 0;
-    line-height: 0;
     position: relative;
     z-index: 1;
+    display: block;
+    padding: 0;
+    line-height: 0;
 
     .hamburger-box {
       width: 24px;
-      height: 20px;
+      height: 16px;
     }
 
     .hamburger-inner {
       width: 24px;
+      height: 2px;
+      border-radius: 0;
 
       &::before,
       &::after {
         width: 24px;
+        height: 2px;
+        border-radius: 0;
       }
     }
 
     &:not(.is-active) {
       .hamburger-inner {
         &::before {
-          top: 8px;
+          top: 7px;
         }
         &::after {
-          top: 16px;
+          top: 14px;
         }
       }
     }

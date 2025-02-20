@@ -18,7 +18,10 @@ const secondHalf = fallacies.slice(midpoint);
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead
+      title="Logicnama.com — Logical Fallacies for Sikhs"
+      description={SITE_DESCRIPTION}
+    />
     <style>
       .embla__slide {
         flex: 0 0 auto;
@@ -48,35 +51,37 @@ const secondHalf = fallacies.slice(midpoint);
       </section>
 
       <!-- carousels -->
-      <section class="my-20 relative">
-        <Carousel>
-          {
-            firstHalf.map((fallacy) => (
-              <div class="embla__slide">
-                <h3 class="h3 font-medium mb-1.5">{fallacy.data.title}</h3>
-                <p class="line-clamp-4">{fallacy.data.description}</p>
-              </div>
-            ))
-          }
-        </Carousel>
-        <Carousel alignment="start" direction="rtl">
-          {
-            secondHalf.map((fallacy) => (
-              <div class="embla__slide">
-                <h3 class="h3 font-medium mb-1.5">{fallacy.data.title}</h3>
-                <p class="line-clamp-4">{fallacy.data.description}</p>
-              </div>
-            ))
-          }
-        </Carousel>
+      <section class="my-20">
+        <div class="container mx-auto max-w-screen-lg relative">
+          <Carousel>
+            {
+              firstHalf.map((fallacy) => (
+                <div class="embla__slide">
+                  <h3 class="h3 font-medium mb-1.5">{fallacy.data.title}</h3>
+                  <p class="line-clamp-4">{fallacy.data.description.slice(0, -1)}</p>
+                </div>
+              ))
+            }
+          </Carousel>
+          <Carousel alignment="start" direction="rtl">
+            {
+              secondHalf.map((fallacy) => (
+                <div class="embla__slide">
+                  <h3 class="h3 font-medium mb-1.5">{fallacy.data.title}</h3>
+                  <p class="line-clamp-4">{fallacy.data.description.slice(0, -1)}</p>
+                </div>
+              ))
+            }
+          </Carousel>
 
-        <div
-          class="pointer-events-none absolute inset-y-0 left-0 h-full w-3/12 bg-gradient-to-r from-background"
-        >
-        </div>
-        <div
-          class="pointer-events-none absolute inset-y-0 right-0 h-full w-3/12 bg-gradient-to-l from-background"
-        >
+          <div
+            class="pointer-events-none absolute inset-y-0 left-0 h-full w-3/12 bg-gradient-to-r from-background"
+          >
+          </div>
+          <div
+            class="pointer-events-none absolute inset-y-0 right-0 h-full w-3/12 bg-gradient-to-l from-background"
+          >
+          </div>
         </div>
       </section>
     </main>
