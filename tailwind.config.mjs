@@ -60,7 +60,7 @@ export default {
         },
       },
       fontFamily: {
-        switzer: "Switzer",
+        spectral: "spectral",
       },
     },
   },
