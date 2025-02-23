@@ -1,60 +1,103 @@
 .md {
-	font-family: "Switzer";
+  font-family: "Spectral";
+  font-size: 17px;
 
-	h2 {
-		margin-bottom: 10px;
+  & * {
+    appearance: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+    -webkit-appearance: optimizelegibility;
+    -moz-appearance: optimizelegibility;
+  }
 
-		&:not(:first-child) {
-			margin-top: 40px;
-		}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Inter";
+    margin-bottom: 0.625em;
+    line-height: 1.16em;
 
-		color: rgb(var(--lf-grey));
-		font-size: 16px;
-	}
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
 
-	p {
-		&:not(:last-child) {
-			margin-bottom: 1rem;
-		}
+  h1 {
+    font-size: 2em;
+  }
 
-		font-size: 16px;
-		text-align: justify;
-		color: rgb(var(--lf-black));
-	}
+  h2 {
+    font-size: 1.625em;
+    font-weight: 700;
+    color: rgb(var(--lf-black));
+  }
 
-	ol {
-		list-style: decimal;
-		padding-left: 1.2rem;
-		margin-bottom: 15px;
-		color: rgb(var(--lf-black));
+  h3 {
+    font-size: 1.375em;
+  }
+  h4 {
+    font-size: 1.125em;
+  }
+  h5 {
+    font-size: 0.83em;
+  }
 
-		&>strong {
-			margin-bottom: 15px;
-			display: inline-block;
-		}
+  p {
+    text-align: justify;
+    color: rgb(var(--lf-black));
 
-	}
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
 
-	ul {
-		list-style: disc;
-		padding-left: 1.2rem;
-		margin-bottom: 15px;
-		color: rgb(var(--lf-black));
-	}
+  ol {
+    margin-bottom: 1em;
 
-	li {
-		margin-bottom: 15px;
-		text-align: justify;
-		color: rgb(var(--lf-black));
-	}
+    color: rgb(var(--lf-black));
+    list-style: decimal;
 
-	blockquote {
-		background: #f9f9f9;
-		border-left: 10px solid #ccc;
-		padding: 1em 10px 0.1em;
-		/* quotes: "\201C""\201D""\2018""\2019"; */
-	}
+    ol,
+    ul {
+      margin-bottom: 0;
+    }
+  }
 
-	@media (min-width: 1024px) {}
+  ul {
+    margin-bottom: 1em;
 
+    list-style: disc;
+    color: rgb(var(--lf-black));
+
+    ol,
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  li {
+    margin-top: 8px;
+    margin-left: 32px;
+    padding-left: 4px;
+
+    color: rgb(var(--lf-black));
+    text-align: justify;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  blockquote {
+    padding: 1em 10px 0.1em;
+    border-left: 10px solid #ccc;
+    background: #f9f9f9;
+    /* quotes: "\201C""\201D""\2018""\2019"; */
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 19px;
+  }
 }
