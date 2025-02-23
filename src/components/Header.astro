@@ -20,6 +20,8 @@ const currentFallacy = subpath?.[1];
       console.log("Aside element does not exist");
     }
 
+    document.body.classList.toggle("overflow-x-hidden");
+
     hamburger?.addEventListener("click", (ev: any) => {
       ev.stopPropagation();
 
@@ -43,21 +45,23 @@ const currentFallacy = subpath?.[1];
 </script>
 
 <header>
-  <div class="container mx-auto max-w-screen-lg px-5">
-    <nav class="header-nav">
-      <div><a href="/">{SITE_TITLE}</a></div>
-      <div>
-        <button
-          class="hamburger hamburger--slider"
-          id="hamburger"
-          type="button"
-        >
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-      </div>
-    </nav>
+  <div class="header-bar">
+    <div class="container mx-auto max-w-screen-lg px-5">
+      <nav class="header-nav">
+        <div><a href="/">{SITE_TITLE}</a></div>
+        <div>
+          <button
+            class="hamburger hamburger--slider"
+            id="hamburger"
+            type="button"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+      </nav>
+    </div>
   </div>
 
   <div class="mobile-sidenav">
@@ -69,7 +73,7 @@ const currentFallacy = subpath?.[1];
               <li>
                 <a
                   class:list={[
-                    fallacy.id === currentFallacy ? "" : "text-lg-grey",
+                    fallacy.id === currentFallacy ? "text-lf-black" : "text-lf-grey",
                     "hover:text-lf-black",
                   ]}
                   href={`/fallacies/${fallacy.id}`}
@@ -89,11 +93,14 @@ const currentFallacy = subpath?.[1];
   @import url("/node_modules/hamburgers/dist/hamburgers.min.css");
 
   header {
-    position: relative;
+    /* position: relative; */
+  }
+
+  .header-bar {
+    position: sticky;
     height: 65px;
     border-bottom: 1px solid #e1e1e1;
     padding: 20px 0;
-    position: sticky;
     top: 0;
     z-index: 2;
     backdrop-filter: blur(20px);
@@ -154,8 +161,8 @@ const currentFallacy = subpath?.[1];
   .mobile-sidenav {
     position: absolute;
     left: 0;
-    right: 0;
     bottom: 0;
+    right: 0;
     top: 65px;
     height: calc(100vh - 65px);
     z-index: 1;
