@@ -1,6 +1,8 @@
 ---
 title: 'Slippery Slope'
 description: "You said that if we allow A to happen, then Z will eventually happen too, therefore A should not happen."
+ogImage: '../../assets/og-images/ogi-slippery-slope.png'
+cover: '../../assets/images/img-9.png'
 ---
 
 ## Example

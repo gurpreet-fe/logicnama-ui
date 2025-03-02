@@ -1,6 +1,8 @@
 ---
 title: 'Appeal to Authority'
 description: 'You said that because an authority thinks something, it must therefore be true.'
+ogImage: '../../assets/og-images/ogi-authority.png'
+cover: '../../assets/images/img-5.png'
 ---
 
 ## Scenario

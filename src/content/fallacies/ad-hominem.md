@@ -1,6 +1,8 @@
 ---
 title: 'Ad Hominem'
 description: "You attacked your opponent's character or personal traits in an attempt to undermine their argument."
+ogImage: '../../assets/og-images/ogi-ad-hominem.png'
+cover: '../../assets/images/img-1.png'
 ---
 
 ## Scenario

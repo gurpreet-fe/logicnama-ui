@@ -1,6 +1,8 @@
 ---
 title: 'Middle Ground'
 description: "You claimed that a compromise, or middle point, between two extremes must be the truth."
+ogImage: '../../assets/og-images/ogi-middle-ground.png'
+cover: '../../assets/images/img-10.png'
 ---
 
 ## Example

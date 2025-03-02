@@ -1,6 +1,8 @@
 ---
 title: 'Tu Quoque'
 description: "You avoided having to engage with criticism by turning it back on the accuser - you answered criticism with criticism (appeal to hypocrisy)."
+ogImage: '../../assets/og-images/ogi-tu-quoque.png'
+cover: '../../assets/images/img-13.png'
 ---
 
 ## Example
@@ -40,4 +42,3 @@ A member of the Sangat approaches a Gurdwara committee, criticizing them for mis
 ## Conclusion
 
 The Gurdwara committee’s response to the criticism about misusing donations exemplifies the Tu Quoque Fallacy. Instead of addressing the legitimate concerns raised by the Sangat member, they deflect the criticism by attacking the individual’s behavior. This logical fallacy undermines productive discussion by shifting focus away from the core issue and failing to engage with the substance of the criticism.
-

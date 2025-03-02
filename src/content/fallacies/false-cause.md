@@ -1,6 +1,8 @@
 ---
 title: 'False Cause'
 description: 'You presumed that a real or perceived relationship between things means that one is the cause of the other. “Correlation does not equal causation”'
+ogImage: '../../assets/og-images/ogi-false-cause.png'
+cover: '../../assets/images/img-12.png'
 ---
 
 ## Example

@@ -1,6 +1,8 @@
 ---
 title: 'Strawman'
 description: "You misrepresented someone's argument to make it easier to attack."
+ogImage: '../../assets/og-images/ogi-strawman.png'
+cover: '../../assets/images/img-7.png'
 ---
 
 ## Example

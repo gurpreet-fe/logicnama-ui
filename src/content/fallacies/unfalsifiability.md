@@ -1,6 +1,8 @@
 ---
 title: 'Unfalsifiability'
 description: "You made a claim that cannot be proven false, because it relies on an explanation that is impossible to test or disprove (appeal to unfalsifiability)."
+ogImage: '../../assets/og-images/ogi-unfalsifiability.png'
+cover: '../../assets/images/img-11.png'
 ---
 
 ## Example
@@ -37,4 +39,4 @@ People claim that certain Sant Babai have powers to read minds, know things supe
 
 In this scenario, the defenders of the Sant Babai are committing the Unfalsifiability fallacy by invoking "divine will" to explain why the Sant Baba cannot use his supposed powers to help people. This makes the claim impossible to challenge, as "divine will" is a concept that cannot be tested or disproven. This reasoning allows the claim to persist without having to provide evidence or accountability, which is why it's considered fallacious.
 
-You can still believe in unfalsifiable claims, but recognise them as just that — beliefs! 
+You can still believe in unfalsifiable claims, but recognise them as just that — beliefs!

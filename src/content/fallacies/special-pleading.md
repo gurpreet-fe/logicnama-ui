@@ -1,7 +1,8 @@
 ---
 title: 'Special Pleading'
 description: 'You moved the goalposts or made up an exception when your claim was shown to be false.'
-
+ogImage: '../../assets/og-images/ogi-special-pleading.png'
+cover: '../../assets/images/img-3.png'
 ---
 
 ## Example

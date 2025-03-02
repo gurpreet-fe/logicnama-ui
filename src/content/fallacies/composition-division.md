@@ -1,6 +1,8 @@
 ---
-title: 'Composition/Divison'
+title: 'Composition / Divison'
 description: 'You assumed that one part of something has to be applied to all, or other, parts of it; or that the whole must apply to its parts.'
+ogImage: '../../assets/og-images/ogi-composition-division.png'
+cover: '../../assets/images/img-2.png'
 ---
 
 ## Example
@@ -43,4 +45,3 @@ The Composition/Division Fallacy occurs when someone assumes that what is true f
 ## Conclusion
 
 The claim that “because Guru Nanak was born in a Hindu family, Sikhs must be Hindus” exemplifies the Composition/Division Fallacy. It wrongly assumes that because one part of Guru Nanak’s life (his family background) is Hindu, the entire religion of Sikhism must also be Hindu. This fallacy overlooks the formation of Sikhism as a distinct faith with its own set of beliefs and practices, stemming from Guru Nanak’s teachings, which were independent of his family’s religion. This kind of reasoning undermines the recognition of Sikhism’s unique identity and philosophical foundations.
-

@@ -1,6 +1,8 @@
 ---
 title: 'Ambiguity'
 description: 'You used a double meaning or ambiguity of language to mislead or misrepresent the truth.'
+ogImage: '../../assets/og-images/ogi-ambiguity.png'
+cover: '../../assets/images/img-8.png'
 ---
 
 ## Scenario

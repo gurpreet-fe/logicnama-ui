@@ -1,6 +1,8 @@
 ---
 title: 'Personal Incredulity'
 description: "Because you found something difficult to understand, or are unaware of how it works, you made out like it's probably not true."
+ogImage: '../../assets/og-images/ogi-personal-incredulity.png'
+cover: '../../assets/images/img-14.png'
 ---
 
 ## Example

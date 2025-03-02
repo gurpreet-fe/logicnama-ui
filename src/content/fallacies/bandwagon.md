@@ -1,6 +1,8 @@
 ---
 title: 'Bandwagon'
 description: 'You appealed to popularity or the fact that many people do something as an attempted form of validation.'
+ogImage: '../../assets/og-images/ogi-bandwagon.png'
+cover: '../../assets/images/img-4.png'
 ---
 
 ## Example
