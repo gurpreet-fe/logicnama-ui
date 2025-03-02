@@ -24,7 +24,6 @@ const { direction } = Astro.props;
       | "backward";
 
     const options = { ...defaultOptions };
-    console.log("direction", direction);
 
     const emblaApi = EmblaCarousel(embla, options, [
       AutoScroll({
