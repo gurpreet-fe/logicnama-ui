@@ -95,6 +95,7 @@ const secondHalf = fallacies.slice(midpoint);
           {
             fallacies.map((fallacy) => (
               <Card
+                cover={fallacy.data.cover}
                 title={fallacy.data.title}
                 text={fallacy.data.description}
                 link={`/fallacies/${fallacy.id}`}

@@ -1,11 +1,13 @@
 ---
-const { title, text, link } = Astro.props;
+import { Image } from "astro:assets";
+
+const { title, text, link, cover } = Astro.props;
 ---
 
 <div class="card">
   <div class="card-inner">
     <div class="card-img">
-      <img src="https://picsum.photos/343" alt="" />
+      <Image src={cover} alt="Test" />
     </div>
     <div class="card-content">
       <h3 class="h3 mb-1">{title}</h3>
@@ -50,6 +52,7 @@ const { title, text, link } = Astro.props;
 
     img {
       aspect-ratio: 4/3;
+      object-fit: cover;
     }
 
     .card-content {
