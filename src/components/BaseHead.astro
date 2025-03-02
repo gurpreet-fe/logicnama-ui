@@ -14,11 +14,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image } = Astro.props;
 
 const img = image ? image : '/blog-placeholder-1.jpg';
-const imgUrl = new URL(img, Astro.url)
----
+const imgUrl = new URL(img, Astro.url);
 
-<!-- Cookiebot -->
-<script is:inline id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="806e4254-f241-483e-99fd-1db3046bd9a5" data-blockingmode="auto" type="text/javascript"></script>
+const isProd = import.meta.env.PROD;
+---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
@@ -28,19 +27,21 @@ const imgUrl = new URL(img, Astro.url)
 <link rel="icon" type="image/png" href="/icons/logo-white.png" media="(prefers-color-scheme: dark)" />
 
 <meta name="generator" content={Astro.generator} />
-<!-- Google tag (gtag.js) -->
-<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-M85ZC3DDFX"></script>
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-M85ZC3DDFX');
-</script>
+{isProd ??
+  <!-- Google tag (gtag.js) -->
+  <script type="text/partytown" is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-M85ZC3DDFX"></script>
+  <script type="text/partytown" is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<!-- Font preloads -->
-<!-- <link rel="preload" href="/fonts/atkinson/atkinson-regular.woff" as="font" type="font/woff" crossorigin /> -->
-<!-- <link rel="preload" href="/fonts/atkinson/atkinson-bold.woff" as="font" type="font/woff" crossorigin /> -->
+    gtag('config', 'G-M85ZC3DDFX');
+  </script>
+
+  <!-- Cookiebot -->
+  <script is:inline id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="806e4254-f241-483e-99fd-1db3046bd9a5" data-blockingmode="auto" type="text/javascript"></script>
+}
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
