@@ -14,9 +14,7 @@ const { title, description, ogImage } = Astro.props;
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description}>
-      <meta property="og:image" content={ogImage.src} />
-    </BaseHead>
+    <BaseHead title={title} description={description} image={ogImage.src} />
 
     <style>
       aside {
@@ -66,7 +64,7 @@ const { title, description, ogImage } = Astro.props;
                     </li>
                   ))
                 }
-                <li class="pt-10">More coming soon...</li>
+                <li class="pt-5 text-lf-grey">More coming soon...</li>
               </ul>
             </aside>
 
