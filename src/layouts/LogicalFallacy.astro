@@ -9,12 +9,15 @@ const fallacies = await getCollection("fallacy");
 
 type Props = CollectionEntry<"fallacy">["data"];
 
-const { title, description } = Astro.props;
+const { title, description, ogImage } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description="" />
+    <BaseHead title={title} description={description}>
+      <meta property="og:image" content={ogImage.src} />
+    </BaseHead>
+
     <style>
       aside {
         border-right: 1px solid #e1e1e1;
@@ -44,10 +47,10 @@ const { title, description } = Astro.props;
     <Header />
 
     <main>
-      <h1 class="title text-center my-20">{title}</h1>
-
       <section class="my-20">
         <div class="container lg:max-w-screen-lg px-4 mx-auto">
+          <h1 class="title text-center my-20">{title}</h1>
+
           <div class="flex">
             <aside>
               <ul>
