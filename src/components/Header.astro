@@ -15,31 +15,41 @@ const currentFallacy = subpath?.[1];
       console.error("Hamburger element does not exist");
     }
 
-    const sidenav = document.querySelector(".mobile-sidenav");
+    const sidenav = document.querySelector(".sidenav") as HTMLElement;
     if (!sidenav) {
       console.log("Aside element does not exist");
     }
 
-    document.body.classList.toggle("overflow-x-hidden");
+    sidenav.classList.add("hidden");
 
     hamburger?.addEventListener("click", (ev: any) => {
       ev.stopPropagation();
+
+      const isSidenavHidden = sidenav.classList.contains("hidden");
+      if (isSidenavHidden) {
+        sidenav.classList.toggle("hidden");
+        sidenav.getBoundingClientRect(); // trigger re-paint
+      } else {
+        setTimeout(() => {
+          sidenav.classList.toggle("hidden");
+        }, 250);
+      }
 
       hamburger.classList.toggle("is-active");
       sidenav?.classList.toggle("active");
       document.body.classList.toggle("overflow-hidden");
 
-      const handleClickOutside = (ev: any) => {
-        if (ev.target !== sidenav) {
-          hamburger.classList.remove("is-active");
-          sidenav?.classList.remove("active");
-          document.body.classList.toggle("overflow-hidden");
+      // const handleClickOutside = (ev: any) => {
+      //   if (ev.target !== sidenav) {
+      //     hamburger.classList.remove("is-active");
+      //     sidenav?.classList.remove("active");
+      //     document.body.classList.toggle("overflow-hidden");
 
-          document.removeEventListener("click", handleClickOutside);
-        }
-      };
+      //     document.removeEventListener("click", handleClickOutside);
+      //   }
+      // };
 
-      document.addEventListener("click", handleClickOutside);
+      // document.addEventListener("click", handleClickOutside);
     });
   });
 </script>
@@ -64,7 +74,7 @@ const currentFallacy = subpath?.[1];
     </div>
   </div>
 
-  <div class="mobile-sidenav">
+  <div class="sidenav">
     <div class="container px-5 mx-auto">
       <nav class="text-end">
         <ul class="flex flex-col gap-2.5 mt-10">
@@ -73,7 +83,9 @@ const currentFallacy = subpath?.[1];
               <li>
                 <a
                   class:list={[
-                    fallacy.id === currentFallacy ? "text-lf-black" : "text-lf-grey",
+                    fallacy.id === currentFallacy
+                      ? "text-lf-black"
+                      : "text-lf-grey",
                     "hover:text-lf-black",
                   ]}
                   href={`/fallacies/${fallacy.id}`}
@@ -93,16 +105,19 @@ const currentFallacy = subpath?.[1];
   @import url("/node_modules/hamburgers/dist/hamburgers.min.css");
 
   header {
-    /* position: relative; */
+    height: 65px;
   }
 
   .header-bar {
-    position: sticky;
-    height: 65px;
-    border-bottom: 1px solid #e1e1e1;
-    padding: 20px 0;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    padding: 20px 0;
     z-index: 2;
+
+    border-bottom: 1px solid #e1e1e1;
     backdrop-filter: blur(20px);
 
     &::after {
@@ -158,7 +173,7 @@ const currentFallacy = subpath?.[1];
     }
   }
 
-  .mobile-sidenav {
+  .sidenav {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -170,10 +185,15 @@ const currentFallacy = subpath?.[1];
     background-color: white;
     transform: translateX(100%);
     will-change: transform;
+    transition-property: transform;
     transition: transform 0.25s ease;
 
     &.active {
       transform: translateX(0);
     }
+  }
+
+  .sidenav:not(.active) {
+    /* display: none; */
   }
 </style>
