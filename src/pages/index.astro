@@ -7,8 +7,10 @@ import { getCollection } from "astro:content";
 import Header from "@/components/Header.astro";
 import "@/styles/global.css";
 import { SITE_DESCRIPTION } from "../consts";
+import { alphabeticalSort } from "@/lib/utils";
 
-const fallacies = await getCollection("fallacy");
+const fallacyCollection = await getCollection("fallacy");
+const fallacies = fallacyCollection.sort((a, b) => alphabeticalSort(a, b));
 
 const midpoint = Math.floor(fallacies.length / 2);
 const firstHalf = fallacies.slice(0, midpoint);
@@ -52,7 +54,9 @@ const secondHalf = fallacies.slice(midpoint);
 
       <!-- carousels -->
       <section class="my-20">
-        <div class="container mx-auto max-w-screen-lg relative">
+        <div
+          class="container mx-auto max-w-screen-lg relative pointer-events-none"
+        >
           <Carousel direction="backward">
             {
               firstHalf.map((fallacy) => (
@@ -75,11 +79,11 @@ const secondHalf = fallacies.slice(midpoint);
           </Carousel>
 
           <div
-            class="pointer-events-none absolute inset-y-0 left-0 h-full w-3/12 bg-gradient-to-r from-background"
+            class="absolute inset-y-0 left-0 h-full w-3/12 bg-gradient-to-r from-background"
           >
           </div>
           <div
-            class="pointer-events-none absolute inset-y-0 right-0 h-full w-3/12 bg-gradient-to-l from-background"
+            class="absolute inset-y-0 right-0 h-full w-3/12 bg-gradient-to-l from-background"
           >
           </div>
         </div>

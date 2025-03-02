@@ -4,8 +4,10 @@ import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
+import { alphabeticalSort } from "@/lib/utils";
 
-const fallacies = await getCollection("fallacy");
+const fallacyCollection = await getCollection("fallacy");
+const fallacies = fallacyCollection.sort((a, b) => alphabeticalSort(a, b));
 
 type Props = CollectionEntry<"fallacy">["data"];
 
@@ -47,7 +49,7 @@ const { title, description, ogImage } = Astro.props;
     <main>
       <section class="my-20">
         <div class="container lg:max-w-screen-lg px-4 mx-auto">
-          <h1 class="title text-center my-20">{title}</h1>
+          <h1 class="title my-20">{title}</h1>
 
           <div class="flex">
             <aside>

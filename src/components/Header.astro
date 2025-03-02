@@ -1,8 +1,10 @@
 ---
 import { SITE_TITLE } from "../consts";
 import { getCollection } from "astro:content";
+import { alphabeticalSort } from "@/lib/utils";
 
-const fallacies = await getCollection("fallacy");
+const fallacyCollection = await getCollection("fallacy");
+const fallacies = fallacyCollection.sort((a, b) => alphabeticalSort(a, b));
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
 const subpath = pathname.match(/[^\/]+/g);
 const currentFallacy = subpath?.[1];

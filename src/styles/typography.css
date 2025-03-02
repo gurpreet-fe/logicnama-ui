@@ -48,6 +48,7 @@
   font-size: 56px;
   font-family: "Inter";
   line-height: 1.2;
+  font-weight: 600;
 
   @media (min-width: 1024px) {
     font-size: 128px;
