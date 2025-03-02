@@ -1,16 +1,14 @@
 ---
 interface Props {
-  direction?: "ltr" | "rtl";
-  alignment?: "start" | "center" | "end";
+  direction?: "forward" | "backward";
 }
-const { direction, alignment } = Astro.props;
+
+const { direction } = Astro.props;
 ---
 
 <script>
   import EmblaCarousel from "embla-carousel";
   import AutoScroll from "embla-carousel-auto-scroll";
-  import type { AlignmentOptionType } from "node_modules/embla-carousel/components/Alignment";
-  import type { AxisDirectionOptionType } from "node_modules/embla-carousel/components/Axis";
 
   const emblaList = Array.from(
     document.querySelectorAll(".embla"),
@@ -21,24 +19,24 @@ const { direction, alignment } = Astro.props;
   };
 
   emblaList.forEach((embla) => {
-    const direction = (embla.dataset.carouselDirection ||
-      "ltr") as AxisDirectionOptionType;
-    const alignment = (embla.dataset.carouselAlignment ||
-      "center") as AlignmentOptionType;
+    const direction = (embla.dataset.carouselDirection || "forward") as
+      | "forward"
+      | "backward";
 
-    const options = { ...defaultOptions, direction, align: alignment };
+    const options = { ...defaultOptions };
+    console.log("direction", direction);
 
-    const emblaApi = EmblaCarousel(embla, options, [AutoScroll()]);
+    const emblaApi = EmblaCarousel(embla, options, [
+      AutoScroll({
+        direction: direction,
+        stopOnInteraction: false,
+      }),
+    ]);
   });
 </script>
 
-<div
-  class="embla mb-5"
-  data-carousel-direction={direction}
-  data-carousel-alignment={alignment}
-  dir={direction === "rtl" ? "rtl" : undefined}
->
-  <div class:list={["embla__container", { "text-end": direction === "rtl" }]}>
+<div class="embla mb-5" data-carousel-direction={direction}>
+  <div class="embla__container">
     <slot />
   </div>
 </div>

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer.astro";
 import { getCollection } from "astro:content";
 import Header from "@/components/Header.astro";
 import "@/styles/global.css";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { SITE_DESCRIPTION } from "../consts";
 
 const fallacies = await getCollection("fallacy");
 
@@ -53,22 +53,22 @@ const secondHalf = fallacies.slice(midpoint);
       <!-- carousels -->
       <section class="my-20">
         <div class="container mx-auto max-w-screen-lg relative">
-          <Carousel>
+          <Carousel direction="backward">
             {
               firstHalf.map((fallacy) => (
                 <div class="embla__slide">
                   <h3 class="h3 font-medium mb-1.5">{fallacy.data.title}</h3>
-                  <p class="line-clamp-4">{fallacy.data.description.slice(0, -1)}</p>
+                  <p class="line-clamp-4">{fallacy.data.description}</p>
                 </div>
               ))
             }
           </Carousel>
-          <Carousel alignment="start" direction="rtl">
+          <Carousel>
             {
               secondHalf.map((fallacy) => (
                 <div class="embla__slide">
                   <h3 class="h3 font-medium mb-1.5">{fallacy.data.title}</h3>
-                  <p class="line-clamp-4">{fallacy.data.description.slice(0, -1)}</p>
+                  <p class="line-clamp-4">{fallacy.data.description}</p>
                 </div>
               ))
             }
