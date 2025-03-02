@@ -28,7 +28,8 @@ const isProd = import.meta.env.PROD;
 
 <meta name="generator" content={Astro.generator} />
 
-{isProd ??
+{isProd
+  ?
   <!-- Google tag (gtag.js) -->
   <script type="text/partytown" is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-M85ZC3DDFX"></script>
   <script type="text/partytown" is:inline>
@@ -40,7 +41,9 @@ const isProd = import.meta.env.PROD;
   </script>
 
   <!-- Cookiebot -->
-  <script is:inline id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="806e4254-f241-483e-99fd-1db3046bd9a5" data-blockingmode="auto" type="text/javascript"></script>
+  <script type="text/partytown" is:inline id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="806e4254-f241-483e-99fd-1db3046bd9a5" data-blockingmode="auto" type="text/javascript"></script>
+  :
+  ""
 }
 
 <!-- Canonical URL -->
