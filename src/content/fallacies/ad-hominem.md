@@ -5,7 +5,7 @@ description: "You attacked your opponent's character or personal traits in an at
 
 ## Scenario
 
-After Baaj Singh gives a speech on why the Khalsa is open to all castes and backgrounds, a member of the audience stands up and says “why should I listen to a Jatt Sikh?”
+After Baaj Singh gives a speech on why the Khalsa is open to all castes and backgrounds, a member of the audience stands up and says “why should I listen to a Mazhbi Sikh?”
 
 ## Understanding the Ad Hominem Fallacy
 
