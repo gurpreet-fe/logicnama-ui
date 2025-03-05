@@ -8,6 +8,7 @@ import Header from "@/components/Header.astro";
 import "@/styles/global.css";
 import { SITE_DESCRIPTION } from "../consts";
 import { alphabeticalSort } from "@/lib/utils";
+import ogImage from "@/assets/og-images/ogi-index.png";
 
 const fallacyCollection = await getCollection("fallacy");
 const fallacies = fallacyCollection.sort((a, b) => alphabeticalSort(a, b));
@@ -15,6 +16,8 @@ const fallacies = fallacyCollection.sort((a, b) => alphabeticalSort(a, b));
 const midpoint = Math.floor(fallacies.length / 2);
 const firstHalf = fallacies.slice(0, midpoint);
 const secondHalf = fallacies.slice(midpoint);
+
+const ogImageSrc = ogImage.src;
 ---
 
 <!doctype html>
@@ -23,6 +26,7 @@ const secondHalf = fallacies.slice(midpoint);
     <BaseHead
       title="Logicnama.com — Logical Fallacies for Sikhs"
       description={SITE_DESCRIPTION}
+      image={ogImageSrc}
     />
     <style>
       .embla__slide {

@@ -22,11 +22,15 @@ const isProd = import.meta.env.PROD;
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+<link rel="preconnect" href="https://rsms.me" />
+<link rel="dns-prefetch" href="https://rsms.me" />
+
+<!-- Favicons -->
 <link rel="icon" type="image/png" href="/icons/logo-black.png"  />
 <link rel="apple-touch-icon" href="/icons/logo-black.png" />
+<link rel="icon" type="image/x-icon" href="/icons/favicon-black.ico">
 <link rel="icon" type="image/png" href="/icons/logo-white.png" media="(prefers-color-scheme: dark)" />
-
-<meta name="generator" content={Astro.generator} />
 
 {isProd
   ?
@@ -40,8 +44,8 @@ const isProd = import.meta.env.PROD;
     gtag('config', 'G-M85ZC3DDFX');
   </script>
 
-  <!-- Cookiebot -->
-  <script type="text/partytown" is:inline id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="806e4254-f241-483e-99fd-1db3046bd9a5" data-blockingmode="auto" type="text/javascript"></script>
+  // <!-- Cookiebot -->
+  // <!-- <script type="text/partytown" is:inline id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="806e4254-f241-483e-99fd-1db3046bd9a5" data-blockingmode="auto" type="text/javascript"></script> -->
   :
   ""
 }
